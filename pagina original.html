@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eclipse Digital</title>
+    <!-- Íconos de Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F1F5F9; /* Fondo suave */
+            color: #111827; /* Gris oscuro para el texto */
+            overflow-x: hidden;
+        }
+        /* Animaciones */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1.5s ease forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Estilos */
+        header {
+            position: relative;
+            background-color: #1E3A8A; /* Azul oscuro */
+            color: white;
+            padding: 80px 20px 40px 20px;
+            text-align: center;
+            overflow: hidden;
+        }
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        .contenido-header {
+            position: relative;
+            z-index: 2;
+        }
+        header img {
+            height: 100px;
+            margin-bottom: 10px;
+            animation: fadeIn 2s ease forwards;
+        }
+        header h1 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            font-size: 3rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        header p {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 300;
+            font-size: 1.25rem;
+            color: #E0F7F5;
+            max-width: 600px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        section {
+            padding: 40px;
+            max-width: 900px;
+            margin: auto;
+        }
+        h2 {
+            color: #064E3B; /* Verde oscuro */
+        }
+        .servicios ul {
+            list-style: none;
+            padding: 0;
+        }
+        .servicios li {
+            background: #E5E7EB; /* Gris claro */
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 18px;
+            transition: transform 0.3s;
+        }
+        .servicios li:hover {
+            transform: scale(1.05);
+            background: #064E3B; /* Verde oscuro al hacer hover */
+            color: white;
+        }
+        .servicios i {
+            color: #1E3A8A; /* Azul oscuro */
+            margin-right: 10px;
+        }
+        footer {
+            background-color: #1E3A8A; /* Azul oscuro */
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        form input, form textarea, form select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        form input:focus, form textarea:focus, form select:focus {
+            border-color: #1E3A8A; /* Azul oscuro */
+            box-shadow: 0 0 5px #1E3A8A;
+        }
+        form button {
+            background-color: #064E3B; /* Verde oscuro */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        form button:hover {
+            background-color: #1D4D3F; /* Verde más oscuro al hacer hover */
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="fade-in">
+        <div id="particles-js"></div> <!-- Partículas -->
+        <div class="contenido-header">
+            <img src="C:\Users\elmen\Pictures\Screenshots\Eclipse Digital.png" alt="Eclipse Digital">
+            <h1>Eclipse Digital</h1>
+            <p>Innovación que ilumina tu futuro digital</p>
+        </div>
+    </header>
+
+    <section class="servicios fade-in">
+        <h2>Servicios</h2>
+        <ul>
+            <li><i class="fas fa-laptop-code"></i> Diseño y desarrollo de sitios web</li>
+            <li><i class="fas fa-bullhorn"></i> Publicidad digital</li>
+            <li><i class="fas fa-pencil-alt"></i> Diseño de logotipos y branding</li>
+            <li><i class="fas fa-cogs"></i> Asesoría tecnológica</li>
+            <li><i class="fas fa-share-alt"></i> Gestión de redes sociales</li>
+        </ul>
+    </section>
+
+    <section class="nosotros fade-in">
+        <h2>Sobre Nosotros</h2>
+        <p>Somos una agencia creativa enfocada en impulsar la presencia digital de emprendedores y negocios. En Eclipse Digital combinamos diseño, estrategia y tecnología para iluminar tu marca en internet.</p>
+    </section>
+
+    <section class="contacto fade-in">
+        <h2>Contáctanos</h2>
+        <form action="https://formsubmit.co/alixmendi.itecca@gmail.com" method="POST" onsubmit="return redirigir();">
+            <input type="text" name="name" placeholder="Tu nombre" required>
+            <input type="email" name="email" placeholder="Tu correo electrónico" required>
+            
+            <label for="servicio">¿Qué servicio te interesa?</label>
+            <select id="servicio" name="servicio" required>
+                <option value="">Selecciona uno</option>
+                <option value="web">Diseño y desarrollo de sitios web</option>
+                <option value="publicidad">Publicidad digital</option>
+                <option value="logos">Diseño de logotipos</option>
+                <option value="asesoria">Asesoría tecnológica</option>
+                <option value="redes">Gestión de redes sociales</option>
+            </select>
+
+            <textarea name="message" rows="5" placeholder="Escribe tu mensaje aquí" required></textarea>
+
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" id="nextURL" name="_next" value="">
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer class="fade-in">
+        <p>&copy; 2025 Eclipse Digital. Todos los derechos reservados.</p>
+    </footer>
+
+<script>
+function redirigir() {
+    const servicio = document.getElementById('servicio').value;
+    const nextInput = document.getElementById('nextURL');
+
+    if (servicio === 'web') {
+        nextInput.value = 'videos-web.html';
+    } else if (servicio === 'publicidad') {
+        nextInput.value = 'videos-publicidad.html';
+    } else if (servicio === 'logos') {
+        nextInput.value = 'videos-logos.html';
+    } else if (servicio === 'asesoria') {
+        nextInput.value = 'videos-asesoria.html';
+    } else if (servicio === 'redes') {
+        nextInput.value = 'videos-redes.html';
+    }
+
+    return true;
+}
+
+particlesJS('particles-js', {
+    particles: {
+        number: {
+            value: 50,
+            density: { enable: true, value_area: 800 }
+        },
+        color: { value: '#ffffff' },
+        shape: {
+            type: 'circle',
+            stroke: { width: 0, color: '#000000' }
+        },
+        opacity: {
+            value: 0.5,
+            random: true
+        },
+        size: {
+            value: 3,
+            random: true
+        },
+        move: {
+            enable: true,
+            speed: 1,
+            direction: 'none',
+            straight: false
+        }
+    },
+    interactivity: {
+        events: {
+            onhover: { enable: true, mode: 'repulse' },
+            onclick: { enable: true, mode: 'push' }
+        }
+    },
+    retina_detect: true
+});
+</script>
+
+</body>
+</html>
